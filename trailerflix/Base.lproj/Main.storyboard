@@ -17,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CaV-tX-lZd">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CaV-tX-lZd">
                                 <rect key="frame" x="0.0" y="73" width="333.5" height="302"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="vfk-O2-LZY" detailTextLabel="eQE-KI-yJt" style="IBUITableViewCellStyleValue1" id="F2h-r4-IQa">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="vfk-O2-LZY" detailTextLabel="eQE-KI-yJt" style="IBUITableViewCellStyleValue1" id="F2h-r4-IQa">
                                         <rect key="frame" x="0.0" y="28" width="333.5" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F2h-r4-IQa" id="LCe-FY-0cb">
@@ -104,7 +104,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="CaV-tX-lZd" id="nKv-FR-gzT"/>
-                        <segue destination="lQg-7N-ui2" kind="show" id="W5u-8d-bIC"/>
+                        <segue destination="lQg-7N-ui2" kind="show" identifier="trailerSegue" id="W5u-8d-bIC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -119,7 +119,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WMY-fW-xwG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WMY-fW-xwG" userLabel="poster">
                                 <rect key="frame" x="0.0" y="0.0" width="253" height="375"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WMY-fW-xwG" secondAttribute="height" multiplier="675:1000" id="k5u-f3-hfZ"/>
@@ -182,8 +182,8 @@
                         <viewLayoutGuide key="safeArea" id="uhS-9C-VXs"/>
                     </view>
                     <connections>
-                        <outlet property="cover" destination="WMY-fW-xwG" id="XEX-b6-vog"/>
                         <outlet property="name" destination="QHL-b2-f1z" id="WmB-Zx-tgi"/>
+                        <outlet property="poster" destination="WMY-fW-xwG" id="Shr-56-ifq"/>
                         <outlet property="rating" destination="DWw-Lj-PrA" id="Lou-ZX-6un"/>
                         <outlet property="trailer" destination="9dP-Ot-NoH" id="FNW-ST-fYh"/>
                         <outlet property="year" destination="996-xd-Vdl" id="tPG-HL-06N"/>

@@ -10,15 +10,16 @@ import UIKit
 
 class TrailerViewController: UIViewController {
 
-    @IBOutlet weak var cover: UIImageView!
+    @IBOutlet weak var poster: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var rating: UILabel!
     @IBOutlet weak var trailer: UIView!
+    var trailerModel:Trailer? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print(trailerModel?.title ?? "error")
     }
     
 
